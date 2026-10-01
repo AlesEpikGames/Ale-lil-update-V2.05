@@ -1,0 +1,123 @@
+.search-notice {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 3;
+    width: min(360px, calc(100vw - 40px));
+    margin: 0;
+    color: white;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.search-page {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    margin: 0 auto;
+    padding: 36px 20px;
+    box-sizing: border-box;
+    color: white;
+    text-align: center;
+}
+
+.search-page h1 {
+    margin: 0 0 24px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.search-form {
+    display: grid;
+    gap: 10px;
+    margin: 0 auto 24px;
+}
+
+.search-form label {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+.search-controls {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+#search-input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px 14px;
+    border: 2px solid white;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font: inherit;
+}
+
+.search-controls button {
+    min-width: 72px;
+    padding: 0 16px;
+    border: 2px solid white;
+    border-radius: 8px;
+    color: white;
+    background: #211035;
+    font: inherit;
+    cursor: pointer;
+}
+
+.search-controls button:hover,
+.search-controls button:focus {
+    background: #6f3997;
+}
+
+.fullscreen-control {
+    position: fixed;
+    right: 32px;
+    bottom: 8px;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    border: 2px solid white;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: white;
+    background-color: #111;
+    background-image: url("https://static.vecteezy.com/system/resources/previews/023/871/323/non_2x/off-white-logo-brand-white-symbol-design-clothes-icon-abstract-illustration-with-black-background-free-vector.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 0;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.fullscreen-control:hover,
+.fullscreen-control:focus {
+    background-color: #6f3997;
+}
+
+#search-frame {
+    display: block;
+    width: 88vw;
+    height: 88vh;
+    margin: 6vh auto;
+    border: 2px solid white;
+    border-radius: 16px;
+    box-sizing: border-box;
+    background: white;
+}
+
+@media (max-width: 560px) {
+    .search-controls {
+        flex-direction: column;
+    }
+
+    .search-controls button {
+        min-height: 44px;
+    }
+}

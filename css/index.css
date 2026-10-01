@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+a {
+    color: inherit;
+}
+
+#home-message {
+    position: absolute;
+    top: calc(35% + 155px);
+    left: 50%;
+    z-index: 2;
+    width: min(94vw, 900px);
+    color: white;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 24px;
+    line-height: 1.4;
+    text-align: center;
+    transform: translateX(-50%);
+}
+
+#home-message a {
+    color: white;
+}
+
+#education{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: calc(35% + 36px);
+    left: calc(50% - 172px);
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    border: 2px solid white;
+    border-radius: 16px;
+    color: white;
+    background: #111;
+    text-decoration: none;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+#other-websites {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: calc(35% + 36px);
+    left: calc(50% - 50px);
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    border: 2px solid white;
+    border-radius: 16px;
+    color: white;
+    background: #111;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+#search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: calc(35% + 36px);
+    left: calc(50% + 72px);
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    border: 2px solid white;
+    border-radius: 16px;
+    color: white;
+    background: #111;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+#education:hover,
+#education:focus,
+#other-websites:hover,
+#other-websites:focus,
+#search:hover,
+#search:focus {
+    transform: scale(1.06);
+    background: #444;
+}
+
+#education,
+#other-websites,
+#search,
+.sidebar-education {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+html{
+    background-color: rgb(24, 21, 21);
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #07112f;
+    background-image: linear-gradient(135deg, #05091d 0%, #0a1d4b 52%, #102e61 100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body.halloween-mode {
+    background-color: #120500;
+    background-image: linear-gradient(135deg, #ff8c00 0%, #8f2600 46%, #050000 100%);
+}
+
+.overlay-sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    width: 33.333vw;
+    min-width: 220px;
+    padding: 32px 24px;
+    box-sizing: border-box;
+    transform: translateX(-100%);
+    background: linear-gradient(155deg, #170b2f 0%, #4e2075 52%, #9a52b8 100%);
+    transition: transform 0.35s ease;
+}
+
+.overlay-sidebar.open {
+    transform: translateX(0);
+}
+
+.overlay-tab {
+    position: absolute;
+    top: 50%;
+    right: -60px;
+    width: 60px;
+    height: 60px;
+    border: 0;
+    border-radius: 0 12px 12px 0;
+    color: white;
+    background: #54277b;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: inherit;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.overlay-panel {
+    display: grid;
+    gap: 12px;
+    margin-top: 72px;
+}
+
+.overlay-panel a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    border-radius: 16px;
+    box-sizing: border-box;
+    color: white;
+    background: #211035;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    text-align: center;
+    text-decoration: none;
+}
+
+.overlay-tab:hover,
+.overlay-tab:focus,
+.overlay-panel a:hover,
+.overlay-panel a:focus {
+    background: #6f3997;
+}
+
+header,
+.home-date,
+#education,
+#other-websites,
+#settings,
+#settings-panel,
+#sidebar,
+#search {
+    z-index: 2;
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 33.333vw;
+    padding: 32px 24px;
+    box-sizing: border-box;
+    transform: translateX(-100%);
+    background: linear-gradient(155deg, #170b2f 0%, #4e2075 52%, #9a52b8 100%);
+    transition: transform 0.35s ease;
+}
+
+#sidebar.open {
+    transform: translateX(0);
+}
+
+#sidebar-tab {
+    position: absolute;
+    top: 50%;
+    right: -42px;
+    width: 42px;
+    height: 60px;
+    border: 0;
+    border-radius: 0 12px 12px 0;
+    color: white;
+    background: #54277b;
+    font: inherit;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.sidebar-education {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    margin-top: 72px;
+    border: 2px solid white;
+    border-radius: 16px;
+    box-sizing: border-box;
+    color: white;
+    background: #211035;
+    text-decoration: none;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.sidebar-education:hover,
+.sidebar-education:focus,
+#sidebar-tab:hover,
+#sidebar-tab:focus,
+#sidebar-settings:hover,
+#sidebar-settings:focus {
+    background: #6f3997;
+}
+
+#sidebar-settings {
+    position: absolute;
+    right: 18px;
+    bottom: 18px;
+    padding: 6px 9px;
+    border: 1px solid white;
+    border-radius: 8px;
+    color: white;
+    background: #211035;
+    font: 12px "Courier New", monospace;
+    cursor: pointer;
+}
+
+header {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    width: max-content;
+    transform: translate(-50%, -50%);
+}
+
+.floating-face {
+    position: fixed;
+    z-index: 0;
+    width: 88px;
+    height: 88px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.background-particle {
+    position: fixed;
+    z-index: 0;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: white;
+    opacity: 0.75;
+    animation: particleFloat var(--duration) ease-in-out var(--delay) infinite alternate;
+}
+
+@keyframes particleFloat {
+    from {
+        transform: translate(-12px, 8px);
+        opacity: 0.35;
+    }
+    to {
+        transform: translate(22px, -24px);
+        opacity: 0.9;
+    }
+}
+
+.home-date {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-family: "Press Start 2P", "Courier New", monospace;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+#settings {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 130px;
+    height: 52px;
+    border: 2px solid white;
+    border-radius: 14px;
+    color: white;
+    background: #111;
+    font: inherit;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+#settings:hover,
+#settings:focus {
+    transform: scale(1.06);
+    background: #444;
+}
+
+#settings-panel {
+    position: fixed;
+    right: 20px;
+    bottom: 82px;
+    display: grid;
+    gap: 8px;
+    padding: 12px;
+    border: 2px solid white;
+    border-radius: 12px;
+    background: #111;
+}
+
+#settings-panel[hidden] {
+    display: none;
+}
+
+#settings-panel button {
+    padding: 9px 12px;
+    border: 1px solid white;
+    border-radius: 8px;
+    color: white;
+    background: #222;
+    font: inherit;
+    cursor: pointer;
+}
+
+#settings-panel button:hover,
+#settings-panel button:focus {
+    background: #444;
+}
+
+header{
+    font-size: 64px;
+    color: white;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    display: block;
+    text-align: center;
+}
+
+@media (max-width: 700px) {
+    #home-message {
+        top: calc(35% + 220px);
+    }
+
+    header {
+        width: calc(100% - 40px);
+        font-size: 40px;
+    }
+
+    #education {
+        top: calc(35% + 100px);
+        left: 4px;
+    }
+
+    #other-websites {
+        top: calc(35% + 100px);
+        left: 122px;
+    }
+
+    #search {
+        top: calc(35% + 100px);
+        left: 240px;
+    }
+}
